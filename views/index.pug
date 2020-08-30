@@ -1,0 +1,76 @@
+extends layout
+
+block navbar
+
+  nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-4
+    a.navbar-brand(href='#')
+    img(src='assets/Logo_ccg_nobg.png' alt='')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarCollapse.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href='/') Inicio 
+        li.nav-item
+          a.nav-link(href='servicios') Publicaciones
+        li.nav-item
+          a.nav-link(href='contacto') Proyectos
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | Staff
+          .dropdown-menu(aria-labelledby='navbarDropdown')
+            each integrante in roster
+              a.dropdown-item(href='#') #{integrante.nombre} #{integrante.apellido}
+            .dropdown-divider
+            a.dropdown-item(href='#') #{title} 
+        li.nav-item
+          a.nav-link(href='contacto') Materias
+        li.nav-item
+          a.nav-link(href='contacto') Galeria
+
+  .content
+    #carouselExampleControls.carousel.slide(data-ride='carousel')
+      .carousel-inner
+        .carousel-item.active
+          img.d-block.w-100(src='assets/carouselImg1.png' alt='First slide')
+        .carousel-item
+          img.d-block.w-100(src='assets/carouselImg2.png' alt='Second slide')
+        .carousel-item
+          img.d-block.w-100(src='assets/carouselImg3.png' alt='Third slide')
+        .carousel-item
+          img.d-block.w-100(src='assets/carouselImg4.jpg' alt='Fourth slide')
+      a.carousel-control-prev(href='#carouselExampleControls' role='button' data-slide='prev')
+        span.carousel-control-prev-icon(aria-hidden='true')
+        span.sr-only Previous
+      a.carousel-control-next(href='#carouselExampleControls' role='button' data-slide='next')
+        span.carousel-control-next-icon(aria-hidden='true')
+        span.sr-only Next
+      a El Centro de Computación Gráfica esta formado por un grupo de investigadores expertos en el desarrollo de software gráfico y manejo de aplicaciones gráficas comerciales, que contribuyen con el impulso de novedosos laboratorios de investigación, como son el Laboratorio de Visualización, el Laboratorio de Realidad Virtual y el Laboratorio de Computación Multimedia.
+       img.d-block.w-100(src='assets/indexImg.png')
+      .row
+        .column
+          a Objetivo
+          .columnContent
+            a
+              a.indexText El objetivo del Centro de Computación Gráfica es promover la experticia en conocimientos de sistemas de visualización donde la interpretación de datos es fundamental. Por esta razón El Centro de Computación Gráfica esta dotado con los equipos de visualización gráfica más avanzados del mercado. 
+        .column
+          a Proyectos
+          .columnContent
+            a.indexText El Centro de Computación Gráfica posee diversos proyectos en curso, algunos de ellos son:
+              ul
+                li LAPAROS
+                li Quirófano Virtual
+                li Colonoscopia Virtual
+                li TRAUMAPLAN
+    .twitterfeed
+      a.twitter-timeline(href='https://twitter.com/chanbanhi?ref_src=twsrc%5Etfw' data-width="300" data-height="800") Tweets by chanbanhi
+      script(async='' src='https://platform.twitter.com/widgets.js' charset='utf-8')
+
+    // Footer
+  footer#sticky-footer.py-4.bg-dark.text-white-50
+    .container.text-center
+      small Copyright &copy; Your Website 
+        
+  link(rel='stylesheet', href='/stylesheets/index.css')
+
+  

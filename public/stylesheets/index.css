@@ -1,0 +1,49 @@
+.carousel-inner{
+    height: 300px;
+}
+
+.carousel-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content{
+    display:flex;
+    height: 100%;
+    width: 100%;
+    padding-top: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.twitterfeed{
+    height: 100%;
+    width: 30%;
+    margin-left: 2%;
+}
+
+#carouselExampleControls{
+    width: 70%;
+    height: 100%;
+    left: 0%;
+}
+
+.column {
+    float: left;
+    margin-left: 2%;
+    width: 45%;
+    text-align: center;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.columnContent{
+    text-align: justify;
+    text-justify: inter-word;
+}
