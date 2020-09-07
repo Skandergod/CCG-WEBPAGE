@@ -1,6 +1,11 @@
-extends layout
-
-block navbar
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+html
+  head
+    title CCG WEB-PAGE
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='icon', href='assets/Logo_ccg_nobg.png')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(charset='utf-8')
+  body
+    h1= message
+    h2= error.status
+    pre #{error.stack}

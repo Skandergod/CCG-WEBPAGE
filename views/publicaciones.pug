@@ -2,25 +2,27 @@ extends layout
 
 block publicaciones
 	.container
-		h1.my-4
-			| Page Heading
 				
 		.row
 			.col-md-8
-				img.img-fluid(src='http://placehold.it/750x500' alt='')
+				img.img-fluid(src='assets/'+publication.imagenDePortada+'' alt='')
 			.col-md-4
-				h3.my-3 Project Description
+				h3.my-3 #{publication.titulo}
 				p
-					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
-				h3.my-3 Project Details
+					| #{publication.descripcion}
+				h3.my-3 Puntos Resaltantes de la Publicacion
 				ul
-					li Lorem Ipsum
-					li Dolor Sit Amet
-					li Consectetur
-					li Adipiscing Elit
-					
-		h3.my-4 Related Projects
+					each detalle in publication.detallesImportantes
+						li #{detalle}
+
+		h3.my-4 Publicaciones
 		.row
+			.col-md-3.col-sm-6.mb-4
+				a(href='#')
+					img.img-fluid(src='http://placehold.it/500x300' alt='')
+			.col-md-3.col-sm-6.mb-4
+				a(href='#')
+					img.img-fluid(src='http://placehold.it/500x300' alt='')
 			.col-md-3.col-sm-6.mb-4
 				a(href='#')
 					img.img-fluid(src='http://placehold.it/500x300' alt='')
