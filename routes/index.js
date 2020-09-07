@@ -6,7 +6,7 @@ var roster = require('./roster.json');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   console.log(roster.integrantes);
-  res.render('index', { title: 'CCG WEB-PAGE', roster: roster.integrantes});
+  res.render('index', {show: 1, roster: roster.integrantes});
 });
 
 module.exports = router;
