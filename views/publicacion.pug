@@ -14,5 +14,25 @@ block publicacion
 				ul
 					each detalle in publication.detallesImportantes
 						li #{detalle}
-
+		
+		
+		.col
+			each parrafo in publication.parrafos
+				if parrafo.tipo
+					if parrafo.imagen 
+						img.img-fluid(src='../assets/'+parrafo.imagen+'' class="rounded mx-auto d-block" alt='')
+					if parrafo.titulo
+						h3.my-3 #{parrafo.titulo}
+					if parrafo.contenido
+						p
+							| #{parrafo.contenido}
+				else 
+					if parrafo.imagen 
+						img.img-fluid(src='../assets/'+parrafo.imagen+'' class="rounded mx-auto d-block" alt='')
+					if parrafo.titulo
+						h3.my-3 #{parrafo.titulo}
+					if parrafo.contenido
+						ul
+							each contenido in parrafo.contenido
+								li #{contenido}
 	

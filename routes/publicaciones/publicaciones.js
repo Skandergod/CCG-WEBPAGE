@@ -10,9 +10,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:id', function(req, res, next) {
-	console.log(req.params.id);
 	var act = lookForPublication(req.params.id);
-	console.log (act.imagenDePortada);
+	console.log (act.parrafos);
 	res.render('publicacion', {publicacion: 1, publication: act ,roster: roster.integrantes});
 });
 
