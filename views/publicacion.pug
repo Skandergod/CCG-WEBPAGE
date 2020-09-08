@@ -1,0 +1,18 @@
+extends layout
+
+block publicacion
+	.container
+				
+		.row
+			.col-md-8
+				img.img-fluid(src='../assets/'+publication.imagenDePortada+'' alt='')
+			.col-md-4
+				h3.my-3 #{publication.titulo}
+				p
+					| #{publication.descripcion}
+				h3.my-3 Puntos Resaltantes de la Publicacion
+				ul
+					each detalle in publication.detallesImportantes
+						li #{detalle}
+
+		

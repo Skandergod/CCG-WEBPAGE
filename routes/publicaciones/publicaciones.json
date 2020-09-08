@@ -1,6 +1,7 @@
 {
     "publicaciones": [
                 {
+                    "id": 1,
                     "titulo": "Rapture",
                     "fechaDePublicacion": "9/7/2020",
                     "imagenDePortada": "Rapture/welcome_to_Rapture.jpg",
