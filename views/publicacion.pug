@@ -14,25 +14,56 @@ block publicacion
 				ul
 					each detalle in publication.detallesImportantes
 						li #{detalle}
-		
+			
 		
 		.col
 			each parrafo in publication.parrafos
 				if parrafo.tipo
-					if parrafo.imagen 
-						img.img-fluid(src='../assets/'+parrafo.imagen+'' class="rounded mx-auto d-block" alt='')
-					if parrafo.titulo
-						h3.my-3 #{parrafo.titulo}
-					if parrafo.contenido
-						p
-							| #{parrafo.contenido}
+					.mt-4
+						.row  
+								if parrafo.imagen
+									.col-md-4
+										img.img-fluid(src='../assets/'+parrafo.imagen+'' class="rounded mx-auto d-block" alt='')
+
+								if !parrafo.list
+									.col-md-8
+										if parrafo.titulo
+												h3.my-3 #{parrafo.titulo}
+										if parrafo.contenido
+											p
+												| #{parrafo.contenido}
+								else
+									.col-md-8
+										if parrafo.titulo
+												h3.my-3 #{parrafo.titulo}
+										if parrafo.contenido
+													ul
+														each contenido in parrafo.contenido
+															li #{contenido}		
+					.mb-4
+
 				else 
-					if parrafo.imagen 
-						img.img-fluid(src='../assets/'+parrafo.imagen+'' class="rounded mx-auto d-block" alt='')
-					if parrafo.titulo
-						h3.my-3 #{parrafo.titulo}
-					if parrafo.contenido
-						ul
-							each contenido in parrafo.contenido
-								li #{contenido}
+					.mt-4
+						.row  
+								if !parrafo.list
+									.col-md-8
+										if parrafo.titulo
+												h3.my-3 #{parrafo.titulo}
+										if parrafo.contenido
+											p
+												| #{parrafo.contenido}
+								else
+									.col-md-8
+										if parrafo.titulo
+												h3.my-3 #{parrafo.titulo}
+										if parrafo.contenido
+													ul
+														each contenido in parrafo.contenido
+															li #{contenido}		
+								if parrafo.imagen
+									.col-md-4
+										img.img-fluid(src='../assets/'+parrafo.imagen+'' class="rounded mx-auto d-block" alt='')
+					.mb-4
+
+							
 	
