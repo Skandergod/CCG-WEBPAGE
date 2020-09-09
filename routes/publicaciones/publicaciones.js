@@ -5,14 +5,15 @@ var publications = require('../publicaciones/publicaciones.json');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-	console.log(publications);
-	res.render('publicaciones', {publicaciones: 1, publication: publications.publicaciones[0] ,roster: roster.integrantes});
+	//console.log(publications.publicaciones);
+	res.render('publicaciones', {publicaciones: 1, list: publications.publicaciones, act: publications.publicaciones[0], roster: roster.integrantes});
 });
 
 router.get('/:id', function(req, res, next) {
 	var act = lookForPublication(req.params.id);
-	console.log (act.parrafos);
-	res.render('publicacion', {publicacion: 1, publication: act ,roster: roster.integrantes});
+	//console.log (act.parrafos);
+	console.log(act);
+	res.render('publicacion', {publicacion: 1, publication: act, roster: roster.integrantes});
 });
 
 
@@ -21,7 +22,7 @@ function lookForPublication(titulo){
 	
 	for(var i = 0; i < publications.publicaciones.length; i++){
 		
-		if(publications.publicaciones[i].titulo.toLowerCase() == titulo){
+		if(publications.publicaciones[i].titulo == titulo){
 			return publications.publicaciones[i];
 		}
 	}

@@ -5,34 +5,21 @@ block publicaciones
 				
 		.row
 			.col-md-8
-				img.img-fluid(src='assets/'+publication.imagenDePortada+'' alt='')
+				img.img-fluid(src='assets/'+act.imagenDePortada+'' alt='')
 			.col-md-4
-				h3.my-3 #{publication.titulo}
+				h3.my-3 #{act.titulo}
 				p
-					| #{publication.descripcion}
+					| #{act.descripcion}
 				h3.my-3 Puntos Resaltantes de la Publicacion
 				ul
-					each detalle in publication.detallesImportantes
+					each detalle in act.detallesImportantes
 						li #{detalle}
 
 		h3.my-4 Publicaciones
 		.row
-			.col-md-3.col-sm-6.mb-4
-				a(href='#')
-					img.img-fluid(src='http://placehold.it/500x300' alt='')
-			.col-md-3.col-sm-6.mb-4
-				a(href='#')
-					img.img-fluid(src='http://placehold.it/500x300' alt='')
-			.col-md-3.col-sm-6.mb-4
-				a(href='#')
-					img.img-fluid(src='http://placehold.it/500x300' alt='')
-			.col-md-3.col-sm-6.mb-4
-				a(href='#')
-					img.img-fluid(src='http://placehold.it/500x300' alt='')
-			.col-md-3.col-sm-6.mb-4
-				a(href='#')
-					img.img-fluid(src='http://placehold.it/500x300' alt='')
-			.col-md-3.col-sm-6.mb-4
-				a(href='#')
-					img.img-fluid(src='http://placehold.it/500x300' alt='')
+			each element in list
+				.col-md-3.col-sm-6.mb-4
+					a(href='publicaciones/'+element.titulo)
+						img.img-fluid.w-100.h-75(src='assets/'+element.imagenDePortada alt='Responsive image')
+					a.d-flex.justify-content-center(href='publicaciones/'+element.titulo) #{element.titulo}
 			

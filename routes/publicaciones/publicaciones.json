@@ -25,6 +25,32 @@
                         }
                     ]
                     
+                },
+                {
+                    "id": 2,
+                    "titulo": "Selfie",
+                    "fechaDePublicacion": "9/7/2020",
+                    "imagenDePortada": "Bella.png",
+                    "detallesImportantes": ["Lealtad","Liderazgo", "Utopia"],
+                    "descripcion": "Soy Andrew Ryan, y tengo una pregunta que hacerte: ¿acaso un hombre no tiene derecho al sudor de su propia frente? No, dice el hombre de Washington. Pertenece a los pobres. No, dice el hombre del Vaticano. Pertenece a Dios. No, dice el hombre de Moscú. Pertenece a todos. Yo rechacé esas respuestas. En vez de eso, elegí algo distinto. Elegí lo imposible. Elegí... Rapture. Una ciudad donde el artista no tenía que temer al censor. Donde el científico no estaba limitado por la nímia moral. Donde los grandes no estaban constreñidos por los pequeños. Y con el sudor de tu frente, ¡Rapture también puede ser tu ciudad!",
+                    "fill": 0,
+                    "parrafos": [
+                        {
+                            "titulo": "Lorem Ipsum",
+                            "imagen": "cutie1.jpg",
+                            "tipo": 1,
+                            "list": 0,
+                            "contenido": "Soy Andrew Ryan, y tengo una pregunta que hacerte: ¿acaso un hombre no tiene derecho al sudor de su propia frente? No, dice el hombre de Washington. Pertenece a los pobres. No, dice el hombre del Vaticano. Pertenece a Dios. No, dice el hombre de Moscú. Pertenece a todos. Yo rechacé esas respuestas. En vez de eso, elegí algo distinto. Elegí lo imposible. Elegí... Rapture. Una ciudad donde el artista no tenía que temer al censor. Donde el científico no estaba limitado por la nímia moral. Donde los grandes no estaban constreñidos por los pequeños. Y con el sudor de tu frente, ¡Rapture también puede ser tu ciudad!"
+                        },
+                        {
+                            "titulo":  0,
+                            "imagen": "Bella.png",
+                            "tipo": 0,
+                            "list": 1,
+                            "contenido": ["Empoderada","Divina", "Buenota"]
+                        }
+                    ]
+                    
                 }
 
             ]
