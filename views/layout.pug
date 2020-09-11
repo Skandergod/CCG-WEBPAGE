@@ -19,7 +19,7 @@ html
           li.nav-item
             a.nav-link.text-white(href='/publicaciones') Publicaciones
           li.nav-item
-            a.nav-link.text-white(href='#') Proyectos
+            a.nav-link.text-white(href='/proyectos') Proyectos
           li.nav-item.dropdown
             a#navbarDropdown.nav-link.text-white.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
               | Staff
@@ -29,7 +29,7 @@ html
               .dropdown-divider
               a.dropdown-item(href='#') asistente
           li.nav-item
-            a.nav-link.text-white(href='#') Materias
+            a.nav-link.text-white(href='/materias') Materias
           li.nav-item
             a.nav-link.text-white(href='#') Galeria
 
@@ -41,6 +41,18 @@ html
 
     if publicacion
       block publicacion
+
+    if proyectos
+      block proyectos
+
+    if proyecto
+      block proyecto
+
+    if materias
+      block materias
+
+    if materia
+      block materia
 
     footer#sticky-footer.py-4.bg-dark.text-white-50
       .container.text-center
