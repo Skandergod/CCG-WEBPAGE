@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var publicacionesRouter = require('./routes/publicaciones/publicaciones');
 var proyectosRouter = require('./routes/proyectos/proyectos');
 var materiasRouter = require('./routes/materias/materias');
+var galeriasRouter = require('./routes/galerias/galerias');
 var roster = require('./routes/roster.json');
 
 var app = express();
@@ -28,6 +29,7 @@ app.use('/users', usersRouter);
 app.use('/publicaciones', publicacionesRouter);
 app.use('/proyectos', proyectosRouter);
 app.use('/materias', materiasRouter);
+app.use('/materias', galeriasRouter);
 
 app.use('/css', express.static(__dirname + '/public/stylesheets'));
 app.use('/js', express.static(__dirname + '/public/javascripts'));

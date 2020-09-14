@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var roster = require('../roster.json');
-var publications = require('../galeria/galerias.json');
+var publications = require('../galerias/galerias.json');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
