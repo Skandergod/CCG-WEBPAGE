@@ -1,10 +1,7 @@
 {
-    "album":[
-        {
-            "imagenes":[
-                "cutie1.jpg", "cutie2.jpg", "cutie3.jpg"
-            ]
-        }
-        
-    ]
+  "album": [
+    {
+      "imagenes": ["cutie1.jpg", "cutie2.jpg", "cutie3.jpg"]
+    }
+  ]
 }
