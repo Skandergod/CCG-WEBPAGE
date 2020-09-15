@@ -1,6 +1,8 @@
 {
     "album":[
         {
+            "titulo": "Album 1",
+            "imagenDePortada": "cutie1.jpg",
             "imagenes":[
                 "cutie1.jpg", "cutie2.jpg", "cutie3.jpg"
             ]
