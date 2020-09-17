@@ -1,6 +1,7 @@
 {
     "album":[
-        {
+        {   
+            "id": 1,    
             "titulo": "Album 1",
             "imagenDePortada": "cutie1.jpg",
             "imagenes":[

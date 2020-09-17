@@ -4,13 +4,10 @@ block galeria
 
     .container
                     
-            h3.my-4 Albumes
+            h3.my-4 Imagenes
             .row
                 each element in list
-                    .col-md-3.mb-0
-                        a(href='#')
-                            img.img-fluid.w-100.h-50(src='assets/'+element.imagenDePortada alt='Responsive image')
-                        a.d-flex.justify-content-center(href='#') #{element.titulo}
-    
-    
-    script
+                    each imagen in element.imagenes
+                        .col-md-3.mb-0
+                            a(href='assets/'+imagen)
+                                img.img-fluid.w-100.h-50(src='assets/'+imagen alt='Responsive image')
