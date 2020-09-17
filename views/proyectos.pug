@@ -1,23 +1,26 @@
 extends layout
 
 block content
-    .row
-        .col-md-8
-            img.img-fluid(src='assets/'+act.imagenDePortada+'' alt='')
-        .col-md-4
-            h3.my-3 #{act.titulo}
-            p
-                | #{act.descripcion}
-            h3.my-3 Puntos Resaltantes del Proyecto
-            ul
-                each detalle in act.detallesImportantes
-                    li #{detalle}
+    .container
+        .row
+            .col-md-8
+                img.img-fluid(src='assets/'+act.imagenDePortada+'' alt='')
+            .col-md-4
+                h3.my-3 #{act.titulo}
+                p
+                    | #{act.descripcion}
+                h3.my-3 Puntos Resaltantes del Proyecto
+                ul
+                    each detalle in act.detallesImportantes
+                        li #{detalle}
 
-    h3.my-4 Proyectos
-    .row
-        each element in list
-            .col-md-3.mb-0
-                a(href='proyectos/'+element.titulo)
-                    img.img-fluid.w-100.h-50(src='assets/'+element.imagenDePortada alt='Responsive image')
-                a.d-flex.justify-content-center(href='proyectos/'+element.titulo) #{element.titulo}
+        h3.my-4 Proyectos
+        .row
+            each element in list
+                figure.col.col-3.mb-1
+                    a.ccg-img-thumbnail-container(href='proyectos/'+element.titulo)
+                        .ccg-img-thumbnail(style='background: url(https://lh3.googleusercontent.com/eKQW2sHKEhpYNaE-it38bG0XNPwu6PLKdi2lGzbxhES2mDcTx9Y0nXRIuTf6WovmfC1LFXMlvS6nHpN0il1BF4xy3aFy1HPwnA=w960-rj-nu-e365) 50% 50% no-repeat') 
+                        figcaption.text-center.pt-2 #{element.titulo}
+
+        .div(style="height:300px")
 

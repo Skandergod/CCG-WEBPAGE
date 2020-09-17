@@ -1,3 +1,16 @@
 .h100 {
   height: 100%;
 }
+.ccg-img-thumbnail-container {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+.ccg-img-thumbnail-container a {
+  display: block;
+}
+
+.ccg-img-thumbnail {
+  /* width: 100px; */
+  width: 250px;
+  height: 250px;
+}
