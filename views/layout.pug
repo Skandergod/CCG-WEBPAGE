@@ -1,67 +1,19 @@
 doctype html
-html
-  head
-    title CCG WEB-PAGE
-    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
-    link(rel='icon', href='assets/Logo_ccg_nobg.png')
-    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    meta(charset='utf-8')
-  body
-    nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-4
-      a.navbar-brand(href='#')
-      img(src='assets/Logo_ccg_nobg.png' alt='')
-      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
-        span.navbar-toggler-icon
-      #navbarCollapse.collapse.navbar-collapse
-        ul.navbar-nav.mr-auto
-          li.nav-item
-            a.nav-link.text-white(href='/') Inicio 
-          li.nav-item
-            a.nav-link.text-white(href='/publicaciones') Publicaciones
-          li.nav-item
-            a.nav-link.text-white(href='/proyectos') Proyectos
-          li.nav-item.dropdown
-            a#navbarDropdown.nav-link.text-white.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-              | Staff
-            .dropdown-menu(aria-labelledby='navbarDropdown')
-              each integrante in roster
-                a.dropdown-item(href='#') #{integrante.nombre} #{integrante.apellido}
-              .dropdown-divider
-              a.dropdown-item(href='#') asistente
-          li.nav-item
-            a.nav-link.text-white(href='/materias') Materias
-          li.nav-item
-            a.nav-link.text-white(href='/galeria') Galeria
+html.h100
+  include components/head.pug
+  body.h100(style="display: flex;\
+    flex-direction: column;\
+    overflow-x: hidden;\
+    justify-content: space-between;")
 
-    if show
-      block index
+include components/nav.pug
+.h100
+  block content
+footer#sticky-footer.py-4.bg-dark.text-white-50
+  .container.text-center
+    small Copyright &copy; Your Website 
 
-    if publicaciones
-      block publicaciones
-
-    if publicacion
-      block publicacion
-
-    if proyectos
-      block proyectos
-
-    if proyecto
-      block proyecto
-
-    if materias
-      block materias
-
-    if materia
-      block materia
-
-    if galeria
-      block galeria
-
-    footer#sticky-footer.py-4.bg-dark.text-white-50
-      .container.text-center
-        small Copyright &copy; Your Website 
-
-  link(rel='stylesheet', href='/stylesheets/layout.css')
-  script(type="text/javascript", src='/js/jquery.min.js')
-  script(type="text/javascript", src='/js/popper.js')
-  script(type="text/javascript", src='/js/bootstrap.min.js')
+  link(rel='stylesheet' href='/stylesheets/layout.css')
+  script(type="text/javascript" src='/js/jquery.min.js')
+  script(type="text/javascript" src='/js/popper.js')
+  script(type="text/javascript" src='/js/bootstrap.min.js')

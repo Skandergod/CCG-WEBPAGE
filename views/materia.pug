@@ -1,67 +1,65 @@
 extends layout
 
-block materia
 
-    .container
-				
-            .row
-                .col-md-8
-                    img.img-fluid(src='../assets/'+publication.imagenDePortada+'' alt='')
-                .col-md-4
-                    h3.my-3 #{publication.titulo}
-                    p
-                        | #{publication.descripcion}
-                    h3.my-3 Puntos Resaltantes del Proyecto
-                    ul
-                        each detalle in publication.detallesImportantes
-                            li #{detalle}
-                
-            
-            .col
-                each parrafo in publication.parrafos
-                    if parrafo.tipo
-                        .mt-4
-                            .row  
-                                    if parrafo.imagen
-                                        .col-md-4
-                                            img.img-fluid(src='../assets/'+parrafo.imagen+'' class="rounded mx-auto d-block" alt='')
+block content
+    .row
+        .col-md-8
+            img.img-fluid(src='../assets/'+publication.imagenDePortada+'' alt='')
+        .col-md-4
+            h3.my-3 #{publication.titulo}
+            p
+                | #{publication.descripcion}
+            h3.my-3 Puntos Resaltantes del Proyecto
+            ul
+                each detalle in publication.detallesImportantes
+                    li #{detalle}
 
-                                    if !parrafo.list
-                                        .col-md-8
-                                            if parrafo.titulo
-                                                    h3.my-3 #{parrafo.titulo}
-                                            if parrafo.contenido
-                                                p
-                                                    | #{parrafo.contenido}
-                                    else
-                                        .col-md-8
-                                            if parrafo.titulo
-                                                    h3.my-3 #{parrafo.titulo}
-                                            if parrafo.contenido
-                                                        ul
-                                                            each contenido in parrafo.contenido
-                                                                li #{contenido}		
-                        .mb-4
 
-                    else 
-                        .mt-4
-                            .row  
-                                    if !parrafo.list
-                                        .col-md-8
-                                            if parrafo.titulo
-                                                    h3.my-3 #{parrafo.titulo}
-                                            if parrafo.contenido
-                                                p
-                                                    | #{parrafo.contenido}
-                                    else
-                                        .col-md-8
-                                            if parrafo.titulo
-                                                    h3.my-3 #{parrafo.titulo}
-                                            if parrafo.contenido
-                                                        ul
-                                                            each contenido in parrafo.contenido
-                                                                li #{contenido}		
-                                    if parrafo.imagen
-                                        .col-md-4
-                                            img.img-fluid(src='../assets/'+parrafo.imagen+'' class="rounded mx-auto d-block" alt='')
-                        .mb-4
+    .col
+        each parrafo in publication.parrafos
+            if parrafo.tipo
+                .mt-4
+                    .row  
+                        if parrafo.imagen
+                            .col-md-4
+                                img.img-fluid(src='../assets/'+parrafo.imagen+'' class="rounded mx-auto d-block" alt='')
+
+                        if !parrafo.list
+                            .col-md-8
+                                if parrafo.titulo
+                                    h3.my-3 #{parrafo.titulo}
+                                if parrafo.contenido
+                                    p
+                                        | #{parrafo.contenido}
+                        else
+                            .col-md-8
+                                if parrafo.titulo
+                                    h3.my-3 #{parrafo.titulo}
+                                if parrafo.contenido
+                                    ul
+                                        each contenido in parrafo.contenido
+                                            li #{contenido}		
+                .mb-4
+
+            else 
+                .mt-4
+                    .row  
+                        if !parrafo.list
+                            .col-md-8
+                                if parrafo.titulo
+                                    h3.my-3 #{parrafo.titulo}
+                                if parrafo.contenido
+                                    p
+                                        | #{parrafo.contenido}
+                        else
+                            .col-md-8
+                                if parrafo.titulo
+                                    h3.my-3 #{parrafo.titulo}
+                                if parrafo.contenido
+                                    ul
+                                        each contenido in parrafo.contenido
+                                            li #{contenido}		
+                        if parrafo.imagen
+                            .col-md-4
+                                img.img-fluid(src='../assets/'+parrafo.imagen+'' class="rounded mx-auto d-block" alt='')
+                .mb-4

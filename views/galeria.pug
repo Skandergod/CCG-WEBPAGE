@@ -1,13 +1,11 @@
 extends layout
 
-block galeria
-
+block content
     .container
-                    
-            h3.my-4 Imagenes
-            .row
-                each element in list
-                    each imagen in element.imagenes
-                        .col-md-3.mb-0
-                            a(href='assets/'+imagen)
-                                img.img-fluid.w-100.h-50(src='assets/'+imagen alt='Responsive image')
+        h3.my-4 Imagenes
+        .row
+            each element in list
+                each imagen in element.imagenes
+                    .col-md-3.mb-0
+                        a(href='assets/'+imagen)
+                            img.img-fluid.w-100.h-50(src='assets/'+imagen alt='Responsive image')
