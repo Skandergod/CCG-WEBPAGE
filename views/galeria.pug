@@ -6,6 +6,6 @@ block content
         .row
             each element in list
                 each imagen in element.imagenes
-                    .col-md-3.mb-0
-                        a(href='assets/'+imagen)
-                            img.img-fluid.w-100.h-50(src='assets/'+imagen alt='Responsive image')
+                    .col-md-3.mb-2
+                        a.d-flex.justify-content-center(href='assets/'+imagen)
+                            img.img-thumbnail(style='object-fit: cover; width: 250px; height: 250px;' src='assets/'+imagen alt='Responsive image')

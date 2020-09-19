@@ -1,23 +1,24 @@
 extends layout
 
 block content				
-	.row
-		.col-md-8
-			img.img-fluid(src='assets/'+act.imagenDePortada+'' alt='')
-		.col-md-4
-			h3.my-3 #{act.titulo}
-			p
-				| #{act.descripcion}
-			h3.my-3 Puntos Resaltantes de la Publicacion
-			ul
-				each detalle in act.detallesImportantes
-					li #{detalle}
+	.container
+			.row
+				.col-md-8
+					img.img-fluid(src='assets/'+act.imagenDePortada+'' alt='')
+				.col-md-4
+					h3.my-3 #{act.titulo}
+					p
+						| #{act.descripcion}
+					h3.my-3 Puntos Resaltantes del Proyecto
+					ul
+						each detalle in act.detallesImportantes
+							li #{detalle}
 
-	h3.my-4 Publicaciones
-	.row
-		each element in list
-			.col-md-3.mb-0
-				a(href='publicaciones/'+element.titulo)
-					img.img-fluid.w-100(src='assets/'+element.imagenDePortada alt='Responsive image')
-				a.d-flex.justify-content-center(href='publicaciones/'+element.titulo) #{element.titulo}
+			h3.my-4 Proyectos
+			.row
+				each element in list
+					.col-md-3.mb-2
+							a.d-flex.justify-content-center(href='proyectos/'+element.titulo)
+								img.img-fluid(style='object-fit: cover; width: 250px; height: 250px;' src='assets/'+element.imagenDePortada alt='Responsive image')
+							a.d-flex.justify-content-center(href='proyectos/'+element.titulo) #{element.titulo}
 
