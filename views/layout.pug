@@ -7,11 +7,10 @@ html.h100
     justify-content: space-between;")
 
 include components/nav.pug
-.h100(style="overflow:auto")
+.h100.mt-3
   block content
-footer#sticky-footer.py-4.bg-dark.text-white-50
-  .container.text-center
-    small Copyright &copy; Your Website 
+  include components/directions.pug
+  include components/footer.pug
 
   link(rel='stylesheet' href='/stylesheets/layout.css')
   script(type="text/javascript" src='/js/jquery.min.js')

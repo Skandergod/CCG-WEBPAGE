@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  .container-fluid.h100
+  .container.h100(style="background: white;")
     .row
       .col-md-9
           #carouselExampleControls.carousel.slide(data-ride='carousel')
@@ -20,7 +20,7 @@ block content
             a.carousel-control-next(href='#carouselExampleControls' role='button' data-slide='next')
               span.carousel-control-next-icon(aria-hidden='true')
               span.sr-only Next
-            p.text-justify El Centro de Computación Gráfica esta formado por un grupo de investigadores expertos en el desarrollo de software gráfico y manejo de aplicaciones gráficas comerciales, que contribuyen con el impulso de novedosos laboratorios de investigación, como son el Laboratorio de Visualización, el Laboratorio de Realidad Virtual y el Laboratorio de Computación Multimedia.
+            p.text-justify.mt-3 El Centro de Computación Gráfica esta formado por un grupo de investigadores expertos en el desarrollo de software gráfico y manejo de aplicaciones gráficas comerciales, que contribuyen con el impulso de novedosos laboratorios de investigación, como son el Laboratorio de Visualización, el Laboratorio de Realidad Virtual y el Laboratorio de Computación Multimedia.
             img.d-block.w-100(src='assets/indexImg.png')
             .row
               .col
@@ -40,7 +40,7 @@ block content
       .col-md-3
         .col-centered
           .twitterfeed
-            a.twitter-timeline(href='https://twitter.com/chanbanhi?ref_src=twsrc%5Etfw' data-width="300" data-height="800") Tweets by chanbanhi
+            a.twitter-timeline(href='https://twitter.com/ccgucv?ref_src=twsrc%5Etfw' data-width="400" data-height="900") Tweets by ccgucv
             script(async='' src='https://platform.twitter.com/widgets.js' charset='utf-8')
 
  
