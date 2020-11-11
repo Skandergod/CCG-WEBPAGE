@@ -1,16 +1,13 @@
 doctype html
 html.h100
   include components/head.pug
-  body.h100(style="display: flex;\
-    flex-direction: column;\
-    overflow-x: hidden;\
-    justify-content: space-between;")
 
-include components/nav.pug
-.h100.mt-3
-  block content
-  include components/directions.pug
-  include components/footer.pug
+  body.h100
+    include components/nav.pug
+    .h100.mt-3
+      block content
+      include components/directions.pug
+      include components/footer.pug
 
   link(rel='stylesheet' href='/stylesheets/layout.css')
   script(type="text/javascript" src='/js/jquery.min.js')

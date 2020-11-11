@@ -1,46 +1,47 @@
 extends layout
 
 block content
-  .container.h100(style="background: white;")
+  .container
     .row
       .col-md-9
+        .row
           #carouselExampleControls.carousel.slide(data-ride='carousel')
-            .carousel-inner
-              .carousel-item.active
-                img.d-block.w-100(src='assets/carouselImg1.png' alt='First slide')
-              .carousel-item
-                img.d-block.w-100(src='assets/carouselImg2.png' alt='Second slide')
-              .carousel-item
-                img.d-block.w-100(src='assets/carouselImg3.png' alt='Third slide')
-              .carousel-item
-                img.d-block.w-100(src='assets/carouselImg4.jpg' alt='Fourth slide')
-            a.carousel-control-prev(href='#carouselExampleControls' role='button' data-slide='prev')
-              span.carousel-control-prev-icon(aria-hidden='true')
-              span.sr-only Previous
-            a.carousel-control-next(href='#carouselExampleControls' role='button' data-slide='next')
-              span.carousel-control-next-icon(aria-hidden='true')
-              span.sr-only Next
-            p.text-justify.mt-3 El Centro de Computación Gráfica esta formado por un grupo de investigadores expertos en el desarrollo de software gráfico y manejo de aplicaciones gráficas comerciales, que contribuyen con el impulso de novedosos laboratorios de investigación, como son el Laboratorio de Visualización, el Laboratorio de Realidad Virtual y el Laboratorio de Computación Multimedia.
-            img.d-block.w-100(src='assets/indexImg.png')
-            .row
-              .col
-                p.text-center Objetivo
+              .carousel-inner
+                .carousel-item.active
+                  img.d-block.w-100(src='assets/carouselImg1.png' alt='First slide')
+                .carousel-item
+                  img.d-block.w-100(src='assets/carouselImg2.png' alt='Second slide')
+                .carousel-item
+                  img.d-block.w-100(src='assets/carouselImg3.png' alt='Third slide')
+                .carousel-item
+                  img.d-block.w-100(src='assets/carouselImg4.jpg' alt='Fourth slide')
+              a.carousel-control-prev(href='#carouselExampleControls' role='button' data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.sr-only Previous
+              a.carousel-control-next(href='#carouselExampleControls' role='button' data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.sr-only Next
+              p.text-justify.mt-3 El Centro de Computación Gráfica esta formado por un grupo de investigadores expertos en el desarrollo de software gráfico y manejo de aplicaciones gráficas comerciales, que contribuyen con el impulso de novedosos laboratorios de investigación, como son el Laboratorio de Visualización, el Laboratorio de Realidad Virtual y el Laboratorio de Computación Multimedia.
+              .text-center  
+                img.img-fluid(src='assets/indexImg.png')
+              .row
                 .col
-                  p.text-justify El objetivo del Centro de Computación Gráfica es promover la experticia en conocimientos de sistemas de visualización donde la interpretación de datos es fundamental. Por esta razón El Centro de Computación Gráfica esta dotado con los equipos de visualización gráfica más avanzados del mercado. 
-              .col
-                p.text-center Proyectos
+                  p.text-center Objetivo
+                  .col
+                    p.text-justify El objetivo del Centro de Computación Gráfica es promover la experticia en conocimientos de sistemas de visualización donde la interpretación de datos es fundamental. Por esta razón El Centro de Computación Gráfica esta dotado con los equipos de visualización gráfica más avanzados del mercado. 
                 .col
-                  p.text-justify El Centro de Computación Gráfica posee diversos proyectos en curso, algunos de ellos son:
-                    ul
-                      li LAPAROS
-                      li Quirófano Virtual
-                      li Colonoscopia Virtual
-                      li TRAUMAPLAN
+                  p.text-center Proyectos
+                  .col
+                    p.text-justify El Centro de Computación Gráfica posee diversos proyectos en curso, algunos de ellos son:
+                      ul
+                        li LAPAROS
+                        li Quirófano Virtual
+                        li Colonoscopia Virtual
+                        li TRAUMAPLAN
 
       .col-md-3
-        .col-centered
-          .twitterfeed
-            a.twitter-timeline(href='https://twitter.com/ccgucv?ref_src=twsrc%5Etfw' data-width="400" data-height="900") Tweets by ccgucv
+        .container  
+            a.twitter-timeline(href='https://twitter.com/ccgucv?ref_src=twsrc%5Etfw' data-height="700") Tweets by ccgucv
             script(async='' src='https://platform.twitter.com/widgets.js' charset='utf-8')
 
  
